@@ -19,6 +19,8 @@ export default defineConfig({
                 short_name: 'SaleCounter',
                 description: 'Offline-capable sale counter and inventory for church events.',
                 theme_color: '#ffffff',
+                start_url: '/church-sale-pwa/',
+                scope: '/church-sale-pwa/',
                 icons: [
                     {
                         src: 'pwa-192x192.png',
