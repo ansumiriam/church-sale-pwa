@@ -1,0 +1,73 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color: #213547;
+    background-color: #ffffff;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+#root {
+    width: 100%;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background: #f4f4f4;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #333;
+}
+
+nav a.active {
+    color: #646cff;
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+h2 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: #fff;
+}
