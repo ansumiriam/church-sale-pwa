@@ -12,7 +12,7 @@ export default defineConfig({
             devOptions: {
                 enabled: true
             },
-            filename: 'manifest.json',
+            manifestFilename: 'manifest.json',
             includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
             manifest: {
                 name: 'Church Sale Counter',
