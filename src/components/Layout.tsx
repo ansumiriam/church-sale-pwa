@@ -13,7 +13,7 @@ const Layout: React.FC = () => {
                 <nav>
                     <Link to="/" className={isActive('/')}>Home</Link>
                     <Link to="/inventory" className={isActive('/inventory')}>Items</Link>
-                    <Link to="/new-sale" className={isActive('/new-sale')}>Sell</Link>
+                    <Link to="/new-sale" className={isActive('/new-sale')}>Sale</Link>
                 </nav>
             </header>
             <main>

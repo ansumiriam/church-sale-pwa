@@ -8,6 +8,16 @@ export interface Counter {
     createdAt: Date;
 }
 
+// Define the Item interface
+export interface Item {
+    id?: number;
+    name: string;
+    price: number;
+    stock: number;
+    isActive: boolean;
+    createdAt: Date;
+}
+
 interface SaleDB extends DBSchema {
     sales: {
         key: number;
@@ -21,15 +31,22 @@ interface SaleDB extends DBSchema {
         key: number;
         value: Counter;
     };
+    items: {
+        key: number;
+        value: Item;
+    };
 }
 
-const dbPromise = openDB<SaleDB>('church-sale-db', 2, {
+const dbPromise = openDB<SaleDB>('church-sale-db', 3, {
     upgrade(db, oldVersion) {
         if (oldVersion < 1) {
             db.createObjectStore('sales', { keyPath: 'key', autoIncrement: true });
         }
         if (oldVersion < 2) {
             db.createObjectStore('counter', { keyPath: 'id', autoIncrement: true });
+        }
+        if (oldVersion < 3) {
+            db.createObjectStore('items', { keyPath: 'id', autoIncrement: true });
         }
     },
 });
